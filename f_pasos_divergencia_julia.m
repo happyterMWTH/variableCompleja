@@ -1,9 +1,8 @@
-function pasos = f_pasos_divergencia_julia(const, exp)
+function pasos = f_pasos_divergencia_julia(z, const, exp)
     pasosMax = 500;
     pasos = 0;
-    z0 = 0;
+    z0 = const;
     zPrev = 0;
-    z = z0;
     while pasos < pasosMax
         zPrev = z;
         z = f_sucesion_julia(zPrev, const, exp);

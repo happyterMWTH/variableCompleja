@@ -1,14 +1,10 @@
-function m = f_hacer_matriz_julia(n, exp)
-    m = zeros(n,n);
+function m = f_hacer_matriz_julia(n, const, exp)
     salto = 4/n;
-    tic
+    m = zeros(n,n);
     for i=1:1:n
-       i
        for j=1:1:n
            z= -2+(j*salto) + (2-i*salto)*1i;
-           m(i,j) = f_pasos_divergencia_julia(z, exp);
+           m(i,j) = f_pasos_divergencia_julia(z,const, exp);
        end
     end
-    imagesc(m);
-    toc
 end
