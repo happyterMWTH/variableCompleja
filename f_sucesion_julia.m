@@ -1,5 +1,5 @@
 function z_next=f_sucesion_julia(z_prev, const, exp)
-    %f_sucesion_mandelbrot(z_prev, const)
+    %f_sucesion_julia(z_prev, const), exp
     %Funcion para calcular el siguiente número de la sucesion de julia
     %Input:
     %z_prev: Anterior número en la sucesión
