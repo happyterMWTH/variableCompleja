@@ -2,7 +2,7 @@ M = zeros(256, 256);
 for i=1:1:256
    M(:,i) = i; 
 end
-figure 1
+figure(1);
 I = mat2gray(M);
 imshow(I);
 %salto_x = 4/256;
@@ -41,5 +41,6 @@ for i=1:1:256
        M_f(x_n, y_n) = M(i,j);
    end
 end
+figure(2)
 Im = mat2gray(M_f);
 imshow(Im);
