@@ -2,10 +2,11 @@ M = zeros(256, 256);
 for i=1:1:256
    M(:,i) = i; 
 end
+figure 1
 I = mat2gray(M);
 imshow(I);
-salto_x = 2/256;
-salto_y = 8/256;
+%salto_x = 4/256;
+%salto_y = 8/256;
 
 
 M_f = zeros(256, 256);
@@ -13,7 +14,8 @@ x_n = [];
 y_n = [];
 for i=1:1:256
    for j=1:1:256
-       z = -1+(j*salto_x) + (4-i*salto_y)*1i;
+       %z = -2+(j*salto_x) + (4-i*salto_y)*1i;
+       z = -256+(j) + (4-i)*1i;
        w = exp(z);
        
        x_n = [x_n real(w)];
@@ -32,7 +34,7 @@ M_f = zeros(256, 256);
 
 for i=1:1:256
    for j=1:1:256
-       z = -4+(j*salto) + (4-i*salto)*1i;
+       z = -4+(j*salto_x) + (4-i*salto_y)*1i;
        w = exp(z);
        x_n = round((real(w)+abs(x_lim_min)+1)*(256/range_x));
        y_n = round((imag(w)+abs(y_lim_min)+1)*(256/range_y));
