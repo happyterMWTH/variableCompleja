@@ -1,5 +1,5 @@
-%Transformaciones para la imagen del monstruo del lago ness
-M = imread('lago_ness.pgm');
+%Transformaciones para la imagen del perrucho
+M = imread('perrucho.pgm');
 
 %Muestro la imagen
 figure(1);
@@ -11,7 +11,7 @@ I = mat2gray(M);
 %Transaformacion e^z
 lim_x = 2;
 lim_y = pi;
-res = 80;
+res = 512;
 transf = @exp;
 
 figure(2)
@@ -24,7 +24,7 @@ drawnow;
 %Transformacion i*sin(z)
 lim_x = 1;
 lim_y = 1;
-res = 80;
+res = 512;
 transf = @f_rotated_sin;
 
 figure(3)
