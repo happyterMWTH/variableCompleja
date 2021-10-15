@@ -1,4 +1,18 @@
 function M_f = f_apply_transformation(Image, fun, lim_x, lim_y, res)
+    %Funcion que le aplica unaa transformacion determinada a una imagen
+    %Input: 
+    %Image: Una matriz de números representando una imagen en blanco y
+    %negro
+    %El centro de la imagen corresponderá al origen en el plano de los
+    %números complejos
+    %fun: La función correspondiente a la transformacion que se le quiere
+    %realizar a la imagen
+    %Lim_x: Un limite de x en el plano de los complejos, horizontalmente la
+    %imagen estará en el rango [-lim_x, lim_x]
+    %Lim_y: Un limite de y en el plano de los complejos, verticalmente la
+    %imagen estará en el rango [-lim_y, lim_y]
+    %Res: resolución de la imagen resultante
+    
     
     fil = size(Image, 1);
     col = size(Image, 2);

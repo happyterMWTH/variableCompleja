@@ -5,10 +5,10 @@ for i=1:1:256
 end
 %Muestro la imagen
 figure(1);
+I = mat2gray(M);
 imshow(I);
 title("Imagen original");
 drawnow;
-I = mat2gray(M);
 
 %Transformacion e^z
 lim_x = 1;
@@ -23,14 +23,14 @@ imshow(Im);
 title("Transformacion e^z");
 drawnow;
 
-%Transformacion i*sin(z)
+%Transformacion sin(z)cos(z)
 lim_x = 1;
 lim_y = 1;
 res = 80;
-transf = @f_rotated_sin;
+transf = @f_rotated_sin_cos;
 
 figure(3)
 M_f = f_apply_transformation(M, transf, lim_x, lim_y, res);
 Im = mat2gray(M_f);
 imshow(Im);
-title("Transformacion i*sin(z)");
+title("Transformacion sin(z)*cos(z)");
