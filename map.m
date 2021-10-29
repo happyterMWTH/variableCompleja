@@ -26,7 +26,7 @@ drawnow;
 lim_x = 1;
 lim_y = 1;
 res = 256;
-transf = @f_rotated_sin_cos;
+transf = @f_sin_cos;
 
 figure(3)
 M_f = f_apply_transformation(M, transf, lim_x, lim_y, res);
