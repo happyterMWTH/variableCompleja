@@ -1,14 +1,14 @@
-frecuencia = 500;
+frecuencia = 5;
 periodo = 1/frecuencia;
-longitud = 1500;
+longitud = 15;
 t = (0:longitud-1)*periodo;
 S = sin(2*pi*t*20)+1.4*sin(2*pi*t*35);
 X = S + 2*randn(size(t));
 
 figure(1)
-plot(frecuencia*t(1:50), X(1:50))
+plot(frecuencia*t, X)
 hold on
-plot(frecuencia*t(1:50), S(1:50))
+plot(frecuencia*t, S)
 hold off
 
 
@@ -31,12 +31,12 @@ for i = 1:1:size(P1, 2)
     Y(1, size(Y, 2)-i+1) = Y(1, i);
 end
 inv = ifft(Y);
-plot(frecuencia*t(1:50), inv(1:50))
+% plot(frecuencia*t, inv)
 
 figure(3)
 Y = fft(S);
 inv = ifft(Y);
-plot(frecuencia*t(1:50), S(1:50))
+plot(frecuencia*t, S)
 P2 = abs(Y/longitud);
 P1 = P2(1:longitud/2+1);
 P1(2:end-1) = 2*P1(2:end-1);
