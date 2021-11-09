@@ -11,7 +11,7 @@ hold off
 
 %Y = fft(S);
 figure(2)
-inv = f_eliminar_ruido(X, longitud, frecuencia);
+inv = f_eliminar_ruido(X, longitud);
 
 figure(3)
 plot(frecuencia*t(1:50), inv(1:50))

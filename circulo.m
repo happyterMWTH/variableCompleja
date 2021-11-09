@@ -1,11 +1,11 @@
 theta = linspace(0, 2*pi, 1500);
 puntos = [];
-[x, y] = pol2cart(theta, 2);
+[x, y] = pol2cart(theta, 1);
 
 
 
-S = x+randn(size(x));
-T = y+rand(size(y));
+S = x+randn(size(x))/2;
+T = y+rand(size(y))/2;
 
 figure(1)
 plot(x, y)
