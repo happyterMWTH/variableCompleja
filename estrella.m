@@ -21,16 +21,17 @@ ya = -2.5*xa+3;
 x = [x xa];
 y = [y ya];
 
-S = x+randn(size(x));
-T = y+rand(size(y));
+S = x+randn(size(x))/5;
+T = y+rand(size(y))/5;
 
 figure(1)
 plot(x, y)
-hold on
+
+figure(2)
 plot(S, T)
 hold off
 
-figure(2)
-x_inv = f_eliminar_ruido(S, size(S,2));
-y_inv = f_eliminar_ruido(T, size(T,2));
+figure(3)
+x_inv = f_eliminar_ruido(S, size(S,2), 0.5);
+y_inv = f_eliminar_ruido(T, size(T,2), 0.5);
 plot(x_inv, y_inv)

@@ -8,13 +8,12 @@ S = x+randn(size(x))/2;
 T = y+rand(size(y))/2;
 
 figure(1)
-plot(x, y)
+plot(S, T)
+title('Señal con ruido');
 
 figure(2)
-plot(S, T)
-
-figure(3)
-x_inv = f_eliminar_ruido(S, size(theta,2));
-y_inv = f_eliminar_ruido(T, size(theta,2));
+x_inv = f_eliminar_ruido(S, size(theta,2), 0.5);
+y_inv = f_eliminar_ruido(T, size(theta,2), 0.5);
 
 plot(x_inv, y_inv)
+title('Señal original')

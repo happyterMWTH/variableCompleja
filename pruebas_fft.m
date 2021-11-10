@@ -7,19 +7,17 @@ X = S + 3*randn(size(t));
 
 figure(1)
 plot(frecuencia*t(1:50), X(1:50))
+title('Señal con ruido')
 hold off
 
 %Y = fft(S);
-figure(2)
-inv = f_eliminar_ruido(X, longitud);
+inv = f_eliminar_ruido(X, longitud, 0.5);
 
-figure(3)
+figure(2)
 plot(frecuencia*t(1:50), inv(1:50))
 % P2 = abs(Y/longitud);
 % P1 = P2(1:longitud/2+1);
 % P1(2:end-1) = 2*P1(2:end-1);
 
 %plot(f,P1) 
-title('Single-Sided Amplitude Spectrum of S(t)')
-xlabel('f (Hz)')
-ylabel('|P1(f)|')
+title('Señal original')
