@@ -27,6 +27,6 @@ plot(S, T)
 hold off
 
 figure(3)
-x_inv = f_eliminar_ruido(S, size(S,2), 0.3);
-y_inv = f_eliminar_ruido(T, size(T,2), 0.3);
+x_inv = f_eliminar_ruido(S, size(S,2), 0.12);
+y_inv = f_eliminar_ruido(T, size(T,2), 0.12);
 plot(x_inv, y_inv)
